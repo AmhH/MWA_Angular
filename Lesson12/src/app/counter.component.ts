@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'app-counter',
-  template: ` <div class='counter'> Counter Component: <button (click)="decrement()"> 
+  template: ` <span class='counter'>  <button (click)="decrement()"> 
            - </button> {{counterValue}} 
-          <button (click)="increment()"> +  </button> </div>`,
-  styles: [`.counter {font-size :12pt}`],
+          <button (click)="increment()"> +  </button> </span>`,
+  styles: [`.counter {font-size :12pt, 
+                      display: solid, 1px, green}`],
 })
 export class CounterComponent implements OnInit {
 
