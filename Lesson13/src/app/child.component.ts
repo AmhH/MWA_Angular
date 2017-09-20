@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p>Lists</p>
     <ul>
-      <li *ngFor="let name of names"> {{name}}</li>
+      <li upper *ngFor="let name of names"> {{name}}</li>
     </ul>
   `,
   styleUrls: [],
