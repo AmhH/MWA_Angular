@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child.component';
-import { UpperDirective } from './upper.directive';
-import { MyvisibilityDirective } from './myvisibility.directive';
+import { UpperDirective } from './Directive/upper.directive';
+import { MyvisibilityDirective } from './Directive/myvisibility.directive';
+import { MyColorDirective } from './Directive/my-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
     UpperDirective,
-    MyvisibilityDirective
+    MyvisibilityDirective,
+    MyColorDirective
   ],
   imports: [
     BrowserModule

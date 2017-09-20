@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
     </ul>
     <p [myvisibility]="true"> Visible Componenet templet.....</p>
     <p [myvisibility]="false"> Not Visible Componenet templet.....</p>
+    
   `,
   styleUrls: [],
   inputs: ["names"]
