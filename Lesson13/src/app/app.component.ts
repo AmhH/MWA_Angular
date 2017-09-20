@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   template: `<div [ngStyle] ="{'text-align':'center'}">
               <h2>Welcome to {{title}}</h2>
             </div>
-            <app-child [names] = names></app-child>`,
+            <app-child [names] = names></app-child>
+            `,
   styleUrls: []
 })
 export class AppComponent {

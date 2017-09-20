@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child.component';
 import { UpperDirective } from './upper.directive';
+import { MyvisibilityDirective } from './myvisibility.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    UpperDirective
+    UpperDirective,
+    MyvisibilityDirective
   ],
   imports: [
     BrowserModule

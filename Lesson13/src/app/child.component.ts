@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
     <ul>
       <li upper *ngFor="let name of names"> {{name}}</li>
     </ul>
+    <p [myvisibility]="true"> Visible Componenet templet.....</p>
+    <p [myvisibility]="false"> Not Visible Componenet templet.....</p>
   `,
   styleUrls: [],
   inputs: ["names"]
