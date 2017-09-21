@@ -2,18 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child.component';
-import { UpperDirective } from './Directive/upper.directive';
-import { MyvisibilityDirective } from './Directive/myvisibility.directive';
-import { MyColorDirective } from './Directive/my-color.directive';
+import { HomeComponent } from './home/home.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent,
-    UpperDirective,
-    MyvisibilityDirective,
-    MyColorDirective
+    HomeComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule
