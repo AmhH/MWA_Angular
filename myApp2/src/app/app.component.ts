@@ -1,43 +1,12 @@
 import { Component } from '@angular/core';
-import {Person} from './person';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>Change Detection Example</h1>
-    <button type="button" (click)="changePersonProperties()">
-      Change Person Properties
-    </button>
-    <button type="button" (click)="changePersonObject()">
-      Change Person Object
-    </button>
-    <br><br>
-    Parent Person Object: {{person.name}}
-    <br>
-    <app-person [person]="person" ></app-person>`,
-
+  templateUrl: './app.component.html',
+  styles: ['.active { color:#fff; background-color:#f44336; border-radius:32px; padding: 5px 10px; }']
 })
 export class AppComponent {
-
-  person = new Person('Asaad Saad');
-
-  changePersonProperties(): void {
-    this.person.name = this.makeRandonString();
-    console.log(this.person);
-  }
-  
-  changePersonObject(): void {
-    this.person = new Person(this.makeRandonString());
-    console.log(this.person);
-  }
-
-
-  makeRandonString(){
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < 5; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-  }
+  // angular will boot our AppComponent, then read the Routes we defined
+  // will load the Route based on our specifications and push it into <router-outlet>
+  // No Network traffic needed when loading components!
 }

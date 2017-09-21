@@ -4,19 +4,41 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
+// Import our Routes file
+import { myRoutes } from "./app.routes";
+import { HomeComponent } from './home.component';
+import { AboutusComponent } from './aboutus.component';
+import { RouteComponent } from './params/route.component';
+import { QueryComponent } from './params/query.component';
+import { FragmentComponent } from './params/fragment.component';
+import { PreserveComponent } from './params/preserve.component';
+import { ParentComponent } from './parentchild/parent.component';
+import { ChildComponent } from './parentchild/child.component';
+import { GuardsComponent } from './guards/guards.component';
+
+import { MyCanActivateGuard } from "./guards/mycanactivate.guard";
+import { MyCanDeactivateGuard } from "./guards/mycandeactivate.guard";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    HomeComponent,
+    AboutusComponent,
+    RouteComponent,
+    QueryComponent,
+    FragmentComponent,
+    PreserveComponent,
+    ParentComponent,
+    ChildComponent,
+    GuardsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    myRoutes // add it to imports
   ],
-  providers: [],
+  providers: [MyCanActivateGuard, MyCanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
