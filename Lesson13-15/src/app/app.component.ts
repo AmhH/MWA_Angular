@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data/data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { Component } from '@angular/core';
             <a [routerLink] = "['home']">Home</a>
             <a [routerLink] = "['student']">Students</a>
             <router-outlet></router-outlet>`,
-  styleUrls: []
+  styleUrls: [],
+  providers: [DataService]
 })
 export class AppComponent {
   title = 'Routing App';

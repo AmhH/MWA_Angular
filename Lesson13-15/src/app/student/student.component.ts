@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data/data.service';
 
 @Component({
   selector: 'student',
-  template: `<p>
-            Welcome to Maharishi University of Management
-            </p>`,
+  template: `<ul *ngFor="let student of getStudentName()">
+                  <li><a href="/profile/{{student.id}}">{{student.name}}</a></li>
+             </ul>`,
   styles: []
 })
 export class StudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
 
+  getStudentName() {
+    return this.dataService.getdata();
+  }
 }

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'home',
-  template: ``,
+  template: `<p>
+            Welcome to Maharishi University of Management
+            </p>`,
   styles: []
 })
 export class HomeComponent implements OnInit {
