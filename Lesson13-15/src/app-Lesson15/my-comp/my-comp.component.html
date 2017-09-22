@@ -1,24 +1,25 @@
 <form [formGroup] = "myForm" (ngSubmit)="onSubmit()" >
     <div class="form-group">
         <p><label for="name">Name </label></p>
-        <p><input type="text" name="name" [formControlName]="name"/></p>
+        <p><input type="text" name="name" formControlName="name"/></p>
         <div class="errors" *ngIf="!myForm.controls['name'].valid">Required</div>
 
         <p><label for="email">Email </label></p>
         <p><input type="text" name="email" [formControl]="myForm.controls['email']" /></p>
-        <div class="errors" *ngIf="!myForm.controls['email'].valid">Required</div>
+        <span class="errors" *ngIf="!myForm.controls['email'].valid">Required</span>
 
         <p><label for="post">Post </label></p>
-        <p><textarea name="post" [formControlName]="post"> </textarea></p>
+        <p><textarea name="post" formControlName="post"> </textarea></p>
         <div class="errors" *ngIf="!myForm.controls['post'].valid">Required</div>
     </div>
     <p><input type="submit" [disabled]="!myForm.valid" value="Submit"/></p>
 </form>
- <div *ngIf="userData">
+ <!--<div *ngIf="userData">
     <p>User Id : {{(userData | async)?.id}}</p>
     <p>User Id : {{(userData | async)?.id}}</p>
     <p>User Id : {{(userData | async)?.id}}</p>
-  </div>
+  </div>-->
+<p><button name="getData" (click)="getData()">Get Data</button></p>
 
   <div *ngIf="userPost">
     <ul *ngFor="let item of userPost |async">
