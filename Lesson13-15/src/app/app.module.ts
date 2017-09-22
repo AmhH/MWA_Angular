@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StudentComponent } from './student/student.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ErrorComponent } from './error/error.component';
+import { MyGuardService } from './my-guard/my-guard.service'
 
 const My_Routes: Routes = [
     { path: '', redirectTo: "home", pathMatch:'full'},
     { path: "home", component: HomeComponent },
     { path: "student", component: StudentComponent },
-    { path: "profile/:id", component: ProfileComponent }
+    { path: "student/profile/:id", component: ProfileComponent/*, canActivate:[MyGuardService]*/ },
+    { path: 'error', component: ErrorComponent}
 ];
 
 @NgModule({
@@ -19,12 +22,13 @@ const My_Routes: Routes = [
     AppComponent,
     HomeComponent,
     StudentComponent,
-    ProfileComponent
+    ProfileComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(My_Routes)
   ],
-  providers: [],
+  providers: [/*MyGuardService*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

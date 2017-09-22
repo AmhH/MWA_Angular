@@ -4,7 +4,7 @@ import { DataService } from '../data/data.service';
 @Component({
   selector: 'student',
   template: `<ul *ngFor="let student of getStudentName()">
-                  <li><a href="/profile/{{student.id}}">{{student.name}}</a></li>
+                  <li><a [routerLink] = "['profile', student.id]">{{student.name}}</a></li>
              </ul>`,
   styles: []
 })
