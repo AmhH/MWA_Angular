@@ -2,11 +2,24 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: ['.active { color:#fff; background-color:#f44336; border-radius:32px; padding: 5px 10px; }']
+  template: `
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Template Driven Form</h1>
+        <template-driven></template-driven>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Data Driven Form</h1>
+      <data-driven></data-driven>
+      <hr>
+    </div>
+  </div>
+</div>`
 })
 export class AppComponent {
-  // angular will boot our AppComponent, then read the Routes we defined
-  // will load the Route based on our specifications and push it into <router-outlet>
-  // No Network traffic needed when loading components!
+  title = 'app works!';
 }

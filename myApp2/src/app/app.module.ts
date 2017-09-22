@@ -1,44 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// use FormsModule Only when using Template Driven Forms
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+// use ReactiveFormsModule Only when using Template Driven Forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-// Import our Routes file
-import { myRoutes } from "./app.routes";
-import { HomeComponent } from './home.component';
-import { AboutusComponent } from './aboutus.component';
-import { RouteComponent } from './params/route.component';
-import { QueryComponent } from './params/query.component';
-import { FragmentComponent } from './params/fragment.component';
-import { PreserveComponent } from './params/preserve.component';
-import { ParentComponent } from './parentchild/parent.component';
-import { ChildComponent } from './parentchild/child.component';
-import { GuardsComponent } from './guards/guards.component';
-
-import { MyCanActivateGuard } from "./guards/mycanactivate.guard";
-import { MyCanDeactivateGuard } from "./guards/mycandeactivate.guard";
+import { TemplateDrivenComponent } from "./template-driven/template-driven.component";
+import { DataDrivenComponent } from "./data-driven/data-driven.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutusComponent,
-    RouteComponent,
-    QueryComponent,
-    FragmentComponent,
-    PreserveComponent,
-    ParentComponent,
-    ChildComponent,
-    GuardsComponent
+    AppComponent, 
+    TemplateDrivenComponent,
+    DataDrivenComponent
   ],
+  // to use Forms we must have FormsModule OR ReactiveFormsModule Here
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    myRoutes // add it to imports
+    ReactiveFormsModule
   ],
-  providers: [MyCanActivateGuard, MyCanDeactivateGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
